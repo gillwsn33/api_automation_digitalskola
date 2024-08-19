@@ -1,0 +1,217 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-08-19T05:53:38.215Z",
+    "end": "2024-08-19T05:53:41.326Z",
+    "duration": 3111,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dae4c62b-39b4-4da6-afd7-c715d3b44fa1",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ead4248f-e3de-4ffb-a6d2-26c16bf06de5",
+          "title": "API Test for 'reqres.in'",
+          "fullFile": "C:\\Users\\NITRO\\Documents\\Mini Bootcamp Digital Skola\\API_Automation\\api_automation_digitalskola\\test\\test-delete.js",
+          "file": "\\test\\test-delete.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test - DELETE Object",
+              "fullTitle": "API Test for 'reqres.in' Test - DELETE Object",
+              "timedOut": false,
+              "duration": 1045,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request(BASE_URL).delete(\"users/2\");\nconst schemaPath = \"resources/delete-object-schema.json\";\nconst jsonSchema = JSON.parse(fs.readFileSync(schemaPath, \"utf8\"));\nconsole.log(response.statusCode);\nconsole.log(response.body);\nassert.jsonSchema(response.body, jsonSchema);\nassert.equal(response.statusCode, 204);",
+              "err": {},
+              "uuid": "e64dbd05-fa58-4ca5-8a00-35cdc12e25f1",
+              "parentUUID": "ead4248f-e3de-4ffb-a6d2-26c16bf06de5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e64dbd05-fa58-4ca5-8a00-35cdc12e25f1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1045,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "d6731be2-afb3-4686-b1d5-e85ddc0c9f70",
+          "title": "API Test for 'reqres.in'",
+          "fullFile": "C:\\Users\\NITRO\\Documents\\Mini Bootcamp Digital Skola\\API_Automation\\api_automation_digitalskola\\test\\test-get.js",
+          "file": "\\test\\test-get.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test - GET All Object",
+              "fullTitle": "API Test for 'reqres.in' Test - GET All Object",
+              "timedOut": false,
+              "duration": 490,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request(BASE_URL).get(\"users?page=2\");\nconst schemaPath = \"resources/get-object-schema.json\";\nconst jsonSchema = JSON.parse(fs.readFileSync(schemaPath, \"utf8\"));\nconsole.log(response.body);\nassert.jsonSchema(response.body, jsonSchema);",
+              "err": {},
+              "uuid": "fc2d4621-92fe-44d4-be05-b60b3d8b4d43",
+              "parentUUID": "d6731be2-afb3-4686-b1d5-e85ddc0c9f70",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fc2d4621-92fe-44d4-be05-b60b3d8b4d43"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 490,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "66311685-9146-46e0-904b-e73457a609b9",
+          "title": "API Test for 'reqres.in'",
+          "fullFile": "C:\\Users\\NITRO\\Documents\\Mini Bootcamp Digital Skola\\API_Automation\\api_automation_digitalskola\\test\\test-post.js",
+          "file": "\\test\\test-post.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test - POST Store Object",
+              "fullTitle": "API Test for 'reqres.in' Test - POST Store Object",
+              "timedOut": false,
+              "duration": 784,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const body = {\n  name: \"morpheus\",\n  job: \"leader\",\n};\nconst response = await request(BASE_URL).post(\"users\").send(body);\nconst schemaPath = \"resources/post-object-schema.json\";\nconst jsonSchema = JSON.parse(fs.readFileSync(schemaPath, \"utf8\"));\nconsole.log(response.statusCode);\nconsole.log(response.body);\nassert.jsonSchema(response.body, jsonSchema);",
+              "err": {},
+              "uuid": "83aa15e3-0c65-41ba-9221-31fab803cebc",
+              "parentUUID": "66311685-9146-46e0-904b-e73457a609b9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "83aa15e3-0c65-41ba-9221-31fab803cebc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 784,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "3b8924d1-39ba-433b-9e3e-908ec4142c29",
+          "title": "API Test for 'reqres.in'",
+          "fullFile": "C:\\Users\\NITRO\\Documents\\Mini Bootcamp Digital Skola\\API_Automation\\api_automation_digitalskola\\test\\test-put.js",
+          "file": "\\test\\test-put.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test - PUT Object",
+              "fullTitle": "API Test for 'reqres.in' Test - PUT Object",
+              "timedOut": false,
+              "duration": 765,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const body = {\n  name: \"morpheus\",\n  job: \"zion resident\",\n};\nconst response = await request(BASE_URL).post(\"users/2\").send(body);\nconst schemaPath = \"resources/put-object-schema.json\";\nconst jsonSchema = JSON.parse(fs.readFileSync(schemaPath, \"utf8\"));\nconsole.log(response.statusCode);\nconsole.log(response.body);\nassert.jsonSchema(response.body, jsonSchema);",
+              "err": {},
+              "uuid": "fc12037d-8a7a-412d-bd09-f8bc84bcd5f6",
+              "parentUUID": "3b8924d1-39ba-433b-9e3e-908ec4142c29",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fc12037d-8a7a-412d-bd09-f8bc84bcd5f6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 765,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.7.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
